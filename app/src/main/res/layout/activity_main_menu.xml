@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6d7d7"
+    tools:context="com.example.hp.ssa.Main_menu"
+    android:id="@+id/drawer">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#008cba"
+            android:gravity="top|start"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            tools:layout_editor_absoluteY="-5dp">
+
+            <android.support.v7.widget.ActionMenuView
+                android:id="@+id/amvMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center_horizontal" />
+        </android.support.v7.widget.Toolbar>
+
+        <ListView
+            android:id="@+id/listView2"
+            android:layout_width="111dp"
+            android:layout_height="330dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/white"
+            android:visibility="invisible"
+            android:layout_below="@+id/toolbar3"></ListView>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tech"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar2"
+            android:background="@android:color/darker_gray"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:visibility="invisible" />
+
+        <VideoView
+            android:id="@+id/videoView3"
+            android:layout_width="318dp"
+            android:layout_height="194dp"
+            android:layout_below="@+id/toolbar3"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_toEndOf="@+id/bio"
+            android:layout_toRightOf="@+id/bio"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/mediacontroller"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/videoView3"
+            android:layout_alignStart="@+id/videoView3"
+            android:layout_below="@+id/videoView3"
+            android:layout_gravity="bottom"
+            android:background="#dddddd"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <ImageButton
+                android:id="@+id/backward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:onClick="backward_btn"
+                android:src="@drawable/ic_fast_rewind_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:onClick="play_btn"
+                android:src="@drawable/ic_play_arrow_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:onClick="forward_btn"
+                android:src="@drawable/ic_fast_forward_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/fullscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:onClick="fullscreen_btn"
+                android:src="@drawable/ic_fullscreen_black_24dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio sentences"
+            android:visibility="invisible"
+            tools:text="Bio sentences"
+            android:layout_alignBaseline="@+id/pictoword"
+            android:layout_alignBottom="@+id/pictoword"
+            android:layout_toRightOf="@+id/pictoword"
+            android:layout_toEndOf="@+id/pictoword" />
+
+        <Button
+            android:id="@+id/alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/pictoword"
+            android:text="Alphabets"
+            android:visibility="invisible"
+            tools:text="Alphabets" />
+
+        <Button
+            android:id="@+id/tech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/toolbar2"
+            android:layout_toEndOf="@+id/freq"
+            android:layout_toRightOf="@+id/freq"
+            android:text="Teaching and Learning"
+            android:visibility="invisible"
+            tools:text="Teaching and Learning" />
+
+        <Button
+            android:id="@+id/freq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frequencey Words"
+            android:visibility="invisible"
+            tools:text="Frequencey Words"
+            android:layout_below="@+id/toolbar2"
+            android:layout_toRightOf="@+id/bio"
+            android:layout_toEndOf="@+id/bio" />
+
+        <Button
+            android:id="@+id/pictoword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar2"
+            android:layout_marginLeft="71dp"
+            android:layout_marginStart="71dp"
+            android:text="Pic To Word"
+            android:visibility="invisible"
+            tools:text="Pic To Word" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/spinner2"
+            android:background="@android:color/background_light"
+            android:visibility="invisible"
+            android:layout_alignRight="@+id/apply"
+            android:layout_alignEnd="@+id/apply"
+            android:layout_alignLeft="@+id/spinner2"
+            android:layout_alignStart="@+id/spinner2" />
+
+        <Button
+            android:id="@+id/apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@+id/freq"
+            android:layout_toStartOf="@+id/freq"
+            android:background="@android:color/holo_green_light"
+            android:text="Apply"
+            android:visibility="invisible" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignEnd="@+id/apply"
+            android:layout_alignLeft="@+id/apply"
+            android:layout_alignRight="@+id/apply"
+            android:layout_alignStart="@+id/apply"
+            android:layout_below="@+id/toolbar3"
+            android:layout_marginTop="11dp"
+            android:background="@android:color/background_light"
+            android:visibility="invisible" />
+
+        <Switch
+            android:id="@+id/speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mediacontroller"
+            android:layout_alignStart="@+id/mediacontroller"
+            android:layout_below="@+id/mediacontroller"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="13dp"
+            android:text="Speed High"
+            android:visibility="invisible" />
+
+        <Switch
+            android:id="@+id/switch5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/speed"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@+id/freq"
+            android:layout_toRightOf="@+id/freq"
+            android:text="flash"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+ <android.support.design.widget.NavigationView
+     android:id="@+id/navigation"
+     android:layout_width="wrap_content"
+     android:layout_height="match_parent"
+     android:layout_below="@+id/toolbar3"
+     app:menu="@menu/navigation_menu"
+     android:layout_gravity="start"
+     app:paddingStart="72dp"
+     app:headerLayout="@layout/navigation_header"
+     >
+
+ </android.support.design.widget.NavigationView>
+        </android.support.v4.widget.DrawerLayout>
+
+
+
+
+
